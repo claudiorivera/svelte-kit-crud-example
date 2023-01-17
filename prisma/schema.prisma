@@ -7,7 +7,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Todo {
-  id          String @id @default(cuid())
-  description String
+model Cat {
+  id   String @id @default(cuid())
+  name String
+  age  Int
 }
