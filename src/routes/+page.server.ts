@@ -15,7 +15,8 @@ export const load: Load = ({ url }) => {
 					},
 					{
 						age: {
-							equals: Number(url.searchParams.get("age")) || undefined,
+							gte: Number(url.searchParams.get("minAge")) || undefined,
+							lte: Number(url.searchParams.get("maxAge")) || undefined,
 						},
 					},
 				],

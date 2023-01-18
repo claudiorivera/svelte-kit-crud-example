@@ -7,18 +7,19 @@
 <h1>All Cats</h1>
 
 <form>
-	<div>
-		<label>
-			Name
-			<input type="search" name="name" />
-		</label>
-	</div>
-	<div>
-		<label>
-			Age
-			<input type="number" inputmode="numeric" name="age" />
-		</label>
-	</div>
+	<label>
+		Name
+		<input type="search" name="name" />
+	</label>
+	<label>
+		Min Age
+		<input type="number" inputmode="numeric" name="minAge" />
+	</label>
+	<label>
+		Max Age
+		<input type="number" inputmode="numeric" name="maxAge" />
+	</label>
+	<button type="reset">Reset</button>
 	<button>Search</button>
 </form>
 
