@@ -11,7 +11,7 @@
 ## Setup
 
 - `cp .env.example .env`
-- `pnpm prisma db push`
+- `pnpm migrate:dev`
 
 ## Develop
 
