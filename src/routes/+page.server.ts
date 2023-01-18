@@ -11,6 +11,7 @@ export const load: Load = ({ url }) => {
 					{
 						name: {
 							contains: url.searchParams.get("name") || undefined,
+							mode: "insensitive",
 						},
 					},
 					{
