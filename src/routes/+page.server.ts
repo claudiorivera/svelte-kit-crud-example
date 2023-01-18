@@ -1,9 +1,7 @@
 import { deleteCatSchema } from "$lib/deleteCatSchema";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "$lib/prisma";
 import { redirect, type Load } from "@sveltejs/kit";
 import type { Actions } from "./$types";
-
-const prisma = new PrismaClient();
 
 export const load: Load = ({ url }) => {
 	return {

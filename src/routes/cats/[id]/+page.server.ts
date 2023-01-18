@@ -1,9 +1,7 @@
-import { PrismaClient } from "@prisma/client";
-import { fail, redirect, type Load } from "@sveltejs/kit";
+import { prisma } from "$lib/prisma";
 import { updateCatSchema } from "$lib/updateCatSchema";
+import { fail, redirect, type Load } from "@sveltejs/kit";
 import type { Actions } from "./$types";
-
-const prisma = new PrismaClient();
 
 export const load: Load = ({ params }) => {
 	return {

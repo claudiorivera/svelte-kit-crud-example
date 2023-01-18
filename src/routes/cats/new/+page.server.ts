@@ -1,9 +1,7 @@
-import { PrismaClient } from "@prisma/client";
-import { fail, redirect } from "@sveltejs/kit";
 import { createCatSchema } from "$lib/createCatSchema";
+import { prisma } from "$lib/prisma";
+import { fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
-
-const prisma = new PrismaClient();
 
 export const actions: Actions = {
 	default: async ({ request }) => {
