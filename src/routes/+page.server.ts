@@ -5,9 +5,24 @@ import type { Actions } from "./$types";
 
 const prisma = new PrismaClient();
 
-export const load: Load = () => {
+export const load: Load = ({ url }) => {
 	return {
-		cats: prisma.cat.findMany(),
+		cats: prisma.cat.findMany({
+			where: {
+				AND: [
+					{
+						name: {
+							contains: url.searchParams.get("name") || undefined,
+						},
+					},
+					{
+						age: {
+							equals: Number(url.searchParams.get("age")) || undefined,
+						},
+					},
+				],
+			},
+		}),
 	};
 };
 

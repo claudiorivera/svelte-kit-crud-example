@@ -6,6 +6,22 @@
 
 <h1>All Cats</h1>
 
+<form>
+	<div>
+		<label>
+			Name
+			<input type="search" name="name" />
+		</label>
+	</div>
+	<div>
+		<label>
+			Age
+			<input type="number" inputmode="numeric" name="age" />
+		</label>
+	</div>
+	<button>Search</button>
+</form>
+
 <table>
 	<thead>
 		<tr>
