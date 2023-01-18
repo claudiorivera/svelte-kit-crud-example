@@ -38,8 +38,7 @@
 					<td>{cat.age}</td>
 					<td><a href="/cats/{cat.id}">View</a></td>
 					<td>
-						<form method="post" action="?/delete">
-							<input type="hidden" name="id" value={cat.id} />
+						<form method="post" action="/cats/{cat.id}?/delete">
 							<button>Delete</button>
 						</form>
 					</td>

@@ -7,7 +7,7 @@
 
 <h1>Cat Details</h1>
 
-<form method="POST">
+<form method="POST" action="?/update">
 	<div>
 		<label
 			>Name

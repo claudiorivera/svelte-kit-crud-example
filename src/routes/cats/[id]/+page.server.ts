@@ -14,7 +14,7 @@ export const load: Load = ({ params }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ request, params }) => {
+	update: async ({ request, params }) => {
 		const formData = Object.fromEntries(await request.formData());
 
 		const validation = updateCatSchema.safeParse(formData);
@@ -30,6 +30,17 @@ export const actions: Actions = {
 				id: params.id,
 			},
 			data: validation.data,
+		});
+
+		if (cat) {
+			throw redirect(302, "/");
+		}
+	},
+	delete: async ({ params }) => {
+		const cat = await prisma.cat.delete({
+			where: {
+				id: params.id,
+			},
 		});
 
 		if (cat) {

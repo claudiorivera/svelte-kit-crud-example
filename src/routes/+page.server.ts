@@ -1,7 +1,5 @@
-import { deleteCatSchema } from "$lib/deleteCatSchema";
 import { prisma } from "$lib/prisma";
-import { redirect, type Load } from "@sveltejs/kit";
-import type { Actions } from "./$types";
+import type { Load } from "@sveltejs/kit";
 
 export const load: Load = ({ url }) => {
 	return {
@@ -24,22 +22,4 @@ export const load: Load = ({ url }) => {
 			},
 		}),
 	};
-};
-
-export const actions: Actions = {
-	delete: async ({ request }) => {
-		const formData = Object.fromEntries(await request.formData());
-
-		const validation = deleteCatSchema.parse(formData);
-
-		const cat = await prisma.cat.delete({
-			where: {
-				id: validation.id,
-			},
-		});
-
-		if (cat) {
-			throw redirect(302, "/");
-		}
-	},
 };
