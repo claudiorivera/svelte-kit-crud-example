@@ -33,7 +33,7 @@ export const actions: Actions = {
 		});
 
 		if (cat) {
-			throw redirect(303, "/");
+			throw redirect(302, "/");
 		}
 	},
 };
