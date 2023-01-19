@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@prisma/client': 4.9.0
-  '@sveltejs/adapter-auto': 1.0.1
+  '@sveltejs/adapter-auto': 1.0.2
   '@sveltejs/kit': 1.1.2
   '@typescript-eslint/eslint-plugin': 5.48.2
   '@typescript-eslint/parser': 5.48.2
@@ -24,7 +24,7 @@ dependencies:
   zod: 3.20.2
 
 devDependencies:
-  '@sveltejs/adapter-auto': 1.0.1_@sveltejs+kit@1.1.2
+  '@sveltejs/adapter-auto': 1.0.2_@sveltejs+kit@1.1.2
   '@sveltejs/kit': 1.1.2_svelte@3.55.1+vite@4.0.4
   '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
   '@typescript-eslint/parser': 5.48.2_7uibuqfxkfaozanbtbziikiqje
@@ -340,8 +340,8 @@ packages:
     resolution: {integrity: sha512-t1pt0Gsp+HcgPJrHFc+d/ZSAaKKWar2G/iakrE07yeKPNavDP3iVKPpfXP22OTCHZUWf7OelwKJxQgKAm5hkgw==}
     requiresBuild: true
 
-  /@sveltejs/adapter-auto/1.0.1_@sveltejs+kit@1.1.2:
-    resolution: {integrity: sha512-IGek24xN1wJb+gz0hyGSxbIvM7q2K+BXquyycteCWbH9MPosjw8+LuIB2HIH20thE/647UEQBNqCM9R73lAUXA==}
+  /@sveltejs/adapter-auto/1.0.2_@sveltejs+kit@1.1.2:
+    resolution: {integrity: sha512-UXpEO/gutERZnD+Z5Vi4J/ifD3WSRuCI7xwtLJTcKNQvJ6t5Xsj1X3Mw2F8Vv/XTUuxf7xPLYUgThU331r0Y9w==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
