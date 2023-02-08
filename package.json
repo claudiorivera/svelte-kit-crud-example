@@ -33,6 +33,6 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "4.9.0",
-		"zod": "3.20.3"
+		"zod": "3.20.5"
 	}
 }
