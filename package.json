@@ -14,7 +14,7 @@
 		"postinstall": "prisma generate"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "2.2.1",
+		"@sveltejs/adapter-vercel": "2.3.0",
 		"@sveltejs/kit": "1.5.5",
 		"@typescript-eslint/eslint-plugin": "5.54.0",
 		"@typescript-eslint/parser": "5.54.0",
