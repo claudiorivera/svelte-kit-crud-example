@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@prisma/client': 4.11.0
-  '@sveltejs/adapter-vercel': 2.2.1
+  '@sveltejs/adapter-vercel': 2.3.0
   '@sveltejs/kit': 1.5.5
   '@typescript-eslint/eslint-plugin': 5.54.0
   '@typescript-eslint/parser': 5.54.0
@@ -24,7 +24,7 @@ dependencies:
   zod: 3.20.6
 
 devDependencies:
-  '@sveltejs/adapter-vercel': 2.2.1_@sveltejs+kit@1.5.5
+  '@sveltejs/adapter-vercel': 2.3.0_@sveltejs+kit@1.5.5
   '@sveltejs/kit': 1.5.5_svelte@3.55.1+vite@4.1.4
   '@typescript-eslint/eslint-plugin': 5.54.0_6mj2wypvdnknez7kws2nfdgupi
   '@typescript-eslint/parser': 5.54.0_ycpbpc6yetojsgtrx3mwntkhsu
@@ -371,8 +371,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel/2.2.1_@sveltejs+kit@1.5.5:
-    resolution: {integrity: sha512-W8+qytNSvFTr56CC4RLC/PeSuzB8m/LnnZlZD3v23qlgRrHHcYyN5mZJHaZmQvQeqsue7rby+LKfqqZiElstlg==}
+  /@sveltejs/adapter-vercel/2.3.0_@sveltejs+kit@1.5.5:
+    resolution: {integrity: sha512-LvSO/jO0rO2tFGNZhNtgzNniMobZmTXho83PouDgjKS3hW9CvIsn80RlRwT/Ay5Tag+kCHb0jViFuWktR9/OVw==}
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
     dependencies:
