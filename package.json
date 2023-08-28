@@ -15,7 +15,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-vercel": "3.0.3",
-		"@sveltejs/kit": "1.22.6",
+		"@sveltejs/kit": "1.23.0",
 		"@typescript-eslint/eslint-plugin": "6.4.1",
 		"@typescript-eslint/parser": "6.4.1",
 		"eslint": "8.48.0",
