@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:base", ":rebaseStalePrs"],
+	"extends": ["config:base"],
 	"packageRules": [
 		{
 			"matchPackagePatterns": ["@sveltejs/kit"],
@@ -17,5 +17,6 @@
 			"automerge": true
 		}
 	],
+	"schedule": ["after 9pm and before 9am every weekday", "every weekend"],
 	"commitMessagePrefix": "🤖"
 }
