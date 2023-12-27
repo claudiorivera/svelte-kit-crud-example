@@ -1,5 +1,5 @@
 import { createCatSchema } from "$lib/createCatSchema";
-import { prisma } from "$lib/prisma";
+import { db } from "$lib/db";
 import { fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 
@@ -15,7 +15,7 @@ export const actions: Actions = {
 				formErrors: validation.error.flatten().formErrors,
 			});
 
-		const cat = await prisma.cat.create({
+		const cat = await db.cat.create({
 			data: validation.data,
 		});
 

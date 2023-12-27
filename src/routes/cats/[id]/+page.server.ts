@@ -1,17 +1,17 @@
-import { prisma } from "$lib/prisma";
+import { db } from "$lib/db";
 import { updateCatSchema } from "$lib/updateCatSchema";
-import { fail, redirect, type Load } from "@sveltejs/kit";
+import { fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 
-export const load: Load = ({ params }) => {
+export async function load({ params }) {
 	return {
-		cat: prisma.cat.findUnique({
+		cat: await db.cat.findUnique({
 			where: {
 				id: params.id,
 			},
 		}),
 	};
-};
+}
 
 export const actions: Actions = {
 	update: async ({ request, params }) => {
@@ -25,7 +25,7 @@ export const actions: Actions = {
 				formErrors: validation.error.flatten().formErrors,
 			});
 
-		const cat = await prisma.cat.update({
+		const cat = await db.cat.update({
 			where: {
 				id: params.id,
 			},
@@ -37,7 +37,7 @@ export const actions: Actions = {
 		}
 	},
 	delete: async ({ params }) => {
-		const cat = await prisma.cat.delete({
+		const cat = await db.cat.delete({
 			where: {
 				id: params.id,
 			},

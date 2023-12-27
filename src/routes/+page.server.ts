@@ -1,9 +1,8 @@
-import { prisma } from "$lib/prisma";
-import type { Load } from "@sveltejs/kit";
+import { db } from "$lib/db";
 
-export const load: Load = ({ url }) => {
+export async function load({ url }) {
 	return {
-		cats: prisma.cat.findMany({
+		cats: await db.cat.findMany({
 			where: {
 				AND: [
 					{
@@ -22,4 +21,4 @@ export const load: Load = ({ url }) => {
 			},
 		}),
 	};
-};
+}
