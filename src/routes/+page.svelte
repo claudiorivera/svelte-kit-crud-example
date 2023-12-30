@@ -31,19 +31,17 @@
 		</tr>
 	</thead>
 	<tbody>
-		{#if data}
-			{#each data.cats as cat}
-				<tr>
-					<td>{cat.name}</td>
-					<td>{cat.age}</td>
-					<td><a href="/cats/{cat.id}">View</a></td>
-					<td>
-						<form method="post" action="/cats/{cat.id}?/delete">
-							<button>Delete</button>
-						</form>
-					</td>
-				</tr>
-			{/each}
-		{/if}
+		{#each data.cats as cat}
+			<tr>
+				<td>{cat.name}</td>
+				<td>{cat.age}</td>
+				<td><a href="/cats/{cat.id}">View</a></td>
+				<td>
+					<form method="post" action="/cats/{cat.id}?/delete">
+						<button>Delete</button>
+					</form>
+				</td>
+			</tr>
+		{/each}
 	</tbody>
 </table>
