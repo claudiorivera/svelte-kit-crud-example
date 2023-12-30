@@ -11,7 +11,7 @@
 ## Setup
 
 - `cp .env.example .env`
-- `pnpm migrate:dev`
+- `pnpm db:push`
 
 ## Develop
 
