@@ -1,5 +1,5 @@
+import { catSchema } from "$lib/catSchema";
 import { db } from "$lib/db";
-import { updateCatSchema } from "$lib/updateCatSchema";
 import { fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 
@@ -17,7 +17,7 @@ export const actions: Actions = {
 	update: async ({ request, params }) => {
 		const formData = Object.fromEntries(await request.formData());
 
-		const validation = updateCatSchema.safeParse(formData);
+		const validation = catSchema.safeParse(formData);
 
 		if (!validation.success)
 			return fail(400, {
