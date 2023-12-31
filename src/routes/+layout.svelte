@@ -1,6 +1,5 @@
 <nav>
-	<a href="/">All Cats</a>
-	<a href="/cats/new">New Cat</a>
+	<a href="/">Home</a>
 </nav>
 
 <slot />

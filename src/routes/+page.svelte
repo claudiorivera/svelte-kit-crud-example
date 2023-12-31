@@ -1,11 +1,15 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
+	import type { ActionData, PageData } from "./$types";
 
 	export let data: PageData;
+	export let form: ActionData;
 </script>
 
-<h1>All Cats</h1>
+<h1>Home</h1>
 
+<hr />
+
+<h2>Search Cats</h2>
 <form>
 	<label>
 		Name
@@ -23,6 +27,7 @@
 	<button>Search</button>
 </form>
 
+<h3>Results</h3>
 <table>
 	<thead>
 		<tr>
@@ -45,3 +50,33 @@
 		{/each}
 	</tbody>
 </table>
+
+<hr />
+
+<h2>New Cat</h2>
+<form method="POST">
+	<div>
+		<label
+			>Name
+			<input type="text" name="name" />
+			{#if form?.fieldErrors?.name}
+				{#each form.fieldErrors.name as error}
+					<div>{error}</div>
+				{/each}
+			{/if}
+		</label>
+	</div>
+	<div>
+		<label
+			>Age
+			<input type="number" inputmode="numeric" name="age" />
+			{#if form?.fieldErrors?.age}
+				{#each form.fieldErrors.age as error}
+					<div>{error}</div>
+				{/each}
+			{/if}
+		</label>
+	</div>
+
+	<button>Save Changes</button>
+</form>
