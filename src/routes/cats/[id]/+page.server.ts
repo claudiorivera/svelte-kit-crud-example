@@ -1,9 +1,9 @@
 import { catSchema } from "$lib/catSchema";
 import { db } from "$lib/db";
-import { fail, redirect } from "@sveltejs/kit";
+import { type Load, fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 
-export async function load({ params }) {
+export const load: Load = async ({ params }) => {
 	return {
 		cat: await db.cat.findUnique({
 			where: {
@@ -11,7 +11,7 @@ export async function load({ params }) {
 			},
 		}),
 	};
-}
+};
 
 export const actions: Actions = {
 	update: async ({ request, params }) => {

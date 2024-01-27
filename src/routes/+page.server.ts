@@ -1,9 +1,9 @@
 import { catSchema } from "$lib/catSchema.js";
 import { db } from "$lib/db";
-import { fail, redirect } from "@sveltejs/kit";
+import { type Load, fail, redirect } from "@sveltejs/kit";
 import type { Actions } from "./$types";
 
-export async function load({ url }) {
+export const load: Load = async ({ url }) => {
 	return {
 		cats: await db.cat.findMany({
 			where: {
@@ -24,7 +24,7 @@ export async function load({ url }) {
 			},
 		}),
 	};
-}
+};
 
 export const actions: Actions = {
 	default: async ({ request }) => {
