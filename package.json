@@ -9,7 +9,7 @@
 		"sync": "svelte-kit sync",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"check:fix": "bunx @biomejs/biome check --apply src",
+		"check:fix": "pnpm biome check --apply src",
 		"typecheck": "tsc --noEmit",
 		"db:push": "prisma db push",
 		"postinstall": "prisma generate"
@@ -20,7 +20,6 @@
 		"@sveltejs/adapter-vercel": "^5.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"bun-types": "1.1.4",
 		"prisma": "5.13.0",
 		"svelte": "^4.2.7",
 		"svelte-check": "^3.6.0",
