@@ -15,7 +15,7 @@
 		"postinstall": "prisma generate"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.7.3",
+		"@biomejs/biome": "1.8.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-vercel": "^5.0.0",
 		"@sveltejs/kit": "^2.0.0",
